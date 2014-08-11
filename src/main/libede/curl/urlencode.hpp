@@ -5,7 +5,7 @@ namespace libede
 {
   namespace curl
   {
-    std::string urlencode( std::string const& string )
+    inline std::string urlencode( std::string const& string )
     {
       static auto_CURL handle;
       char* escaped = curl_easy_escape(handle.get(), string.c_str(), string.length());
